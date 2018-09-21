@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.2.5",
 	"appid": "wxbbae6b5ce993f243",
-	"projectname": "person",
+	"projectname": "persomWx",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

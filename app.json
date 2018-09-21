@@ -6,9 +6,11 @@
     
   ],
   "window": {
+    "navigationBarBackgroundColor": "#043667",
+    "navigationBarTitleText": "个人空间",
+    "navigationBarTextStyle": "#ffffff",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "backgroundColor": "#efeff4",
+    "enablePullDownRefresh": true
   }
 }

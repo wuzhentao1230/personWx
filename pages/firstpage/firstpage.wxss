@@ -24,7 +24,7 @@
 }
 .left{
   position:absolute;
-  /* left: 10vh; */
+  left: 10vh;
   width: 100px;
   height:130px;
   /* border-radius: 100%; */
@@ -50,12 +50,12 @@
         -webkit-transform: rotate(30deg);        
     }
     50%{
-        left: 50vh;
+        left: 40vh;
         background-color: #2a7df8;
         -webkit-transform: rotate(0);
     }
     70%{
-        left: 50vh;
+        left: 40vh;
         background-color: #2a7df8;
         -webkit-transform: rotate(0);
     }    
@@ -81,12 +81,12 @@
         transform: rotate(30deg);        
     }
     50%{
-        left: 50vh;
+        left: 40vh;
         background-color: #2a7df8;
         -webkit-transform: rotate(0);
     }
     70%{
-        left: 50vh;
+        left: 40vh;
         background-color: #2a7df8;
         -webkit-transform: rotate(0);
     }    

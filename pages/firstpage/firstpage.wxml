@@ -1,5 +1,5 @@
 <view class='content'>
-  <view class='head'><image style='width:100vh' src='../../images/yun.jpg'></image></view>
+  <view class='head'>记录美好</view>
   <view class='body'>
     <image class='left' src='{{person.img}}'></image>
     <image class='right'></image>
@@ -8,4 +8,4 @@
     <button class='button1'>进入主界面</button>
   </view>
 </view>
-<image class='bg' src='../../images/background.jpg'></image> 
+<image class='bg' src='../../images/yun.jpg'></image> 
