@@ -6,7 +6,8 @@ Page({
    */
   data: {
     person:{
-      img:'../../images/snn.jpg'
+      leftimg:'../../images/snn.jpg',
+      rightimg:'../../images/nanmei.jpg'
     }
   },
 

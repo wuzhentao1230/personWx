@@ -1,19 +1,22 @@
 /* pages/firstpage/firstpage.wxss */
-.content{
+
+.content {
   /* 意为"弹性布局"，用来为盒状模型提供最大的灵活性 */
-  display:block;
+  display: block;
 }
-.head{
-  opacity:0.5;
+
+.head {
+  opacity: 0.5;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   /* 手机自适应高度 */
   height: 10vh;
-  z-index: 2
+  z-index: 2;
 }
-.body{
+
+.body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,97 +25,39 @@
   height: 60vh;
   position: relative;
 }
-.left{
-  position:absolute;
-  left: 10vh;
-  width: 100px;
-  height:130px;
-  /* border-radius: 100%; */
-  animation: gogogo 10s linear infinite;
-}
-@keyframes xz{
-  0%{transform:rotate(0deg);}
-  100%{transform:rotate(360deg);}
-}
-@-webkit-keyframes gogogo
-{
-    0% { 
-        background-color: #eb5C7e;
-        -webkit-transform: rotate(0);
-    }
-    10% {
-        background-color: #eb5C7e;
-        -webkit-transform: rotate(0);    
-    }
-    30%{
-        background-color: #1b9e55;
-        left: 0; 
-        -webkit-transform: rotate(30deg);        
-    }
-    50%{
-        left: 40vh;
-        background-color: #2a7df8;
-        -webkit-transform: rotate(0);
-    }
-    70%{
-        left: 40vh;
-        background-color: #2a7df8;
-        -webkit-transform: rotate(0);
-    }    
-    100%{ 
-        left:10vh;
-        background-color: #eb5C7e;
-        -webkit-transform: rotate(-360deg);
-    }
-}
-@keyframes gogogo
-{
-    0% { 
-        background-color: #eb5C7e;
-        transform: rotate(0);    
-    }
-    10% {
-        background-color: #eb5C7e;
-        transform: rotate(0);    
-    }
-    30%{
-        background-color: #1b9e55;
-        left: 0; 
-        transform: rotate(30deg);        
-    }
-    50%{
-        left: 40vh;
-        background-color: #2a7df8;
-        -webkit-transform: rotate(0);
-    }
-    70%{
-        left: 40vh;
-        background-color: #2a7df8;
-        -webkit-transform: rotate(0);
-    }    
-    100%{ 
-        left:10vh;
-        background-color: #eb5C7e;
-        -webkit-transform: rotate(-360deg);
-    }
-}
-.right{
+
+.left {
   position: absolute;
-  right: 10vh;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  animation: xz 10s linear infinite;
+   left: 13vh;
+   top:10vh;
+   width: 80px;
+   height: 104px;
+   transform: rotate(-390deg);
+  /* border-radius: 100%; */
+  animation: gogogo 3s linear;
 }
-.getIn{
+.right {
+  position: absolute;
+  right: 15vh;
+  top: 10vh;
+  width: 100px;
+  height: 110px;
+  border-radius: 20%;
+  transform: rotate(30deg);
+  animation: xz 5s linear;
+}
+
+.getIn {
   display: flex;
+  opacity: 0.5;
   justify-content: center;
   align-items: center;
   width: 100%;
   /* 手机自适应高度 */
   height: 10vh;
 }
-.bg{
+
+.bg {
   display: block;
   position: fixed;
   /* 宽度默认750rpx */
@@ -121,5 +66,74 @@
   top: 0;
   left: 0;
   z-index: -1;
-  
+}
+@keyframes xz {
+  0% {
+    top: 0vh;
+    width: 20vh;
+    height: 20vh;
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(390deg);
+  }
+}
+
+@-webkit-keyframes gogogo {
+  0% {
+    left: 10vh;
+    width: 100px;
+    height: 130px;
+    background-color: #eb5c7e;
+    -webkit-transform: rotate(0);
+  }
+  30% {
+    left: 40vh;
+    background-color: #2a7df8;
+    -webkit-transform: rotate(0);
+  }
+  60% {
+    left: 10vh;
+    width: 100px;
+    height: 130px;
+    background-color: #eb5c7e;
+    -webkit-transform: rotate(-390deg);
+  }
+  100% {
+    width: 80px;
+    height: 104px;
+    /* transform: rotate(-20deg); */
+    /* -webkit-transform: rotate(-30deg); */
+  }
+}
+
+@keyframes gogogo {
+  0% {
+    width: 100px;
+    height: 130px;
+    background-color: #eb5c7e;
+    transform: rotate(0);
+  }
+  30% {
+    left: 40vh;
+    background-color: #2a7df8;
+    -webkit-transform: rotate(0);
+  }
+  60% {
+    left: 10vh;
+    width: 100px;
+    height: 130px;
+    background-color: #eb5c7e;
+    -webkit-transform: rotate(-390deg);
+  }
+  100% {
+    width: 80px;
+   height: 104px;
+   /* webkit-transform: rotate(-20deg); */
+    /* -webkit-transform: rotate(-300deg); */
+  }
 }
