@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/drawing/drawing",
     "pages/index/index",
     "pages/firstpage/firstpage",
     "pages/logs/logs"
-    
   ],
   "window": {
     "navigationBarBackgroundColor": "#043667",
