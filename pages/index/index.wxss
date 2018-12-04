@@ -19,7 +19,8 @@
 .usermotto {
   margin-top: 200px;
 }
-
-.mapSize {
-  
-}
+.scroll-h {white-space: nowrap; width: 100%;}
+.scroll-item-h {display: inline-block;  width: 60%;  height: 200px;}
+.bc-red {background-color: red;}
+.bc-green {background-color: green;}
+.bc-orange {background-color: orange;}

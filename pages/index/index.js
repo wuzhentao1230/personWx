@@ -7,7 +7,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    info:null,
   },
   //事件处理函数
   bindViewTap: function() {
@@ -49,6 +50,16 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  getInfo:function(res){
+      this.setData({
+        info:JSON.stringify(res)
+      })
+  },
+  get2:function(res){
+    this.setData({
+      posotion: "q2",
     })
   }
 })

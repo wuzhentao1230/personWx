@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<!-- <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     
@@ -10,4 +10,12 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-</view>
+  <image src=''></image>
+</view> -->
+<scroll-view class="scroll-h" scroll-x  bindscroll="getInfo"  scroll-left="{{}}" bindscrolltolower="get2">
+    <view id="q1" class="scroll-item-h bc-red">1</view>
+    <view id="q2" class="scroll-item-h bc-green">2</view>
+    <view id="q3" class="scroll-item-h bc-orange">3</view>
+  </scroll-view>
+  <view>{{info}}</view>
+  <view>{{posotion}}</view>
