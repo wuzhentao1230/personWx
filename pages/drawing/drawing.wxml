@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <view class='canvas-area'>
-    <canvas canvas-id='myCanvas' class='myCanvas' disable-scroll='false' bindtouchstart='touchstart' bindtouchmove='touchmove'></canvas>
+    <canvas canvas-id='myCanvas' class='myCanvas' disable-scroll='false' bindtouchstart='touchstart' bindtouchmove='touchmove' bindtouchend='touchend'></canvas>
   </view>
   <cover-view class='canvas-tools'>
     <cover-view class='box box1' bindtap='penselect' data-param="5"></cover-view>
