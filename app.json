@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/dailyshow/dailyshow",
     "pages/firstpage/firstpage",
     "pages/drawing/drawing",
     "pages/logs/logs"
