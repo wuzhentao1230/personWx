@@ -10,7 +10,20 @@ App({
     wx.login({
       success: res => {
         console.log(res.code);
+        var codeStr = res.code
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        wx.request({
+          url: 'https://wztsnn.xyz/wx/getId', // 仅为示例，并非真实的接口地址
+          data: {
+            code: codeStr
+          },
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success(res) {
+            console.log(res.data.data.openid)
+          }
+        })
       }
     })
     // 获取用户信息
