@@ -32,6 +32,7 @@
    top:10vh;
    width: 80px;
    height: 104px;
+   border-radius: 20%;
    transform: rotate(-390deg);
   /* border-radius: 100%; */
   animation: gogogo 3s linear;
@@ -40,8 +41,8 @@
   position: absolute;
   right: 15vh;
   top: 10vh;
-  width: 100px;
-  height: 110px;
+  width: 80px;
+  height: 90px;
   border-radius: 20%;
   transform: rotate(30deg);
   animation: xz 5s linear;

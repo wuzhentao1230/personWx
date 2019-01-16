@@ -1,4 +1,4 @@
 <!--pages/dailyshow/dailyshow.wxml-->
 <view class='container'>
-  
+  <image class='avatar' src='{{}}'></image>
 </view>

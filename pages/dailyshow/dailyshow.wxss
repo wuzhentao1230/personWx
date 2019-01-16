@@ -2,5 +2,5 @@
 .container{
   width: 100vw;
   height: 100vh;
-  background-color: #043667;
+  background: linear-gradient(#043667,#568abe,rgb(119, 198, 230));
 }
