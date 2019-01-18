@@ -7,6 +7,7 @@ Page({
    */
   data: {
     hasAuth: false,
+    userInfo: null,
     person: {
       leftimg: '../../images/snn.jpg',
       rightimg: '../../images/nanmei.jpg'
@@ -17,6 +18,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    
     wx.hideShareMenu()
   },
 
@@ -26,6 +28,10 @@ Page({
   onReady: function() {
     var that = this
     setTimeout(function() {
+      that.setData({
+        userInfo: app.globalData.userInfo
+      })
+      console.log(that.data.userInfo)
       if (app.globalData.userInfo) {
         that.setData({
           hasAuth: true

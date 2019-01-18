@@ -1,14 +1,26 @@
 <view class='content'>
-  <!-- <view class='head'></view> -->
+  
   <view class='body'>
     <!-- <image class='left' src='{{person.leftimg}}'></image>
     <image class='right' src='{{person.rightimg}}'></image> -->
   </view>
+
+  <image class='leftPic' src='{{userInfo.avatarUrl}}' mode='widthFix'></image>
+
+  <image class='rightPic' src='../../images/dianji.png' mode='widthFix'></image>
+
+
+
+
+
+  <!-- 中央点击事件 -->
   <view class='getIn'>
     <button wx:if="{{hasAuth==true}}" class='button1' bindtap='jumpDailyShow'>进入主界面</button>
     <button wx:if="{{hasAuth==false}}" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
-  获取用户信息
-</button>
+      获取用户信息
+    </button>
   </view>
+
+
 </view>
-<image class='bg' src='../../images/yun.jpg'></image> 
+<image class='bg' src='../../images/yun.jpg'></image>

@@ -50,12 +50,27 @@
 
 .getIn {
   display: flex;
+  position: absolute;
+  top: 65vh;
   opacity: 0.5;
   justify-content: center;
   align-items: center;
   width: 100%;
   /* 手机自适应高度 */
   height: 10vh;
+}
+.leftPic{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50px;
+}
+.rightPic{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50px;
+  transform: rotate(180deg);
 }
 
 .bg {
