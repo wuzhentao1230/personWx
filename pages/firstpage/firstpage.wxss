@@ -1,8 +1,11 @@
 /* pages/firstpage/firstpage.wxss */
-
-.content {
+.content{
   /* 意为"弹性布局"，用来为盒状模型提供最大的灵活性 */
   display: block;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: black; */
+  
 }
 
 .head {
@@ -28,15 +31,16 @@
 
 .left {
   position: absolute;
-   left: 13vh;
-   top:10vh;
-   width: 80px;
-   height: 104px;
-   border-radius: 20%;
-   transform: rotate(-390deg);
+  left: 13vh;
+  top: 10vh;
+  width: 80px;
+  height: 104px;
+  border-radius: 20%;
+  transform: rotate(-390deg);
   /* border-radius: 100%; */
   animation: gogogo 3s linear;
 }
+
 .right {
   position: absolute;
   right: 15vh;
@@ -59,97 +63,65 @@
   /* 手机自适应高度 */
   height: 10vh;
 }
-.leftPic{
+
+.leftPic {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 5px;
+  
 }
-.rightPic{
+
+.rightView {
   position: absolute;
   top: 0px;
   right: 0px;
   width: 50px;
-  transform: rotate(180deg);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: black;
 }
 
-.bg {
-  display: block;
+.rightPic {
+  animation: xz 1s infinite alternate;
+}
+.bgView{
   position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  /* background: linear-gradient(#043667,#568abe,rgb(119, 198, 230)); */
+}
+.bg {
   /* 宽度默认750rpx */
   width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  height: 100%;
+  z-index: 2;
 }
+
 @keyframes xz {
   0% {
-    top: 0vh;
-    width: 20vh;
-    height: 20vh;
-    transform: rotate(0deg);
+    width: 20px;
+    height: 20px;
+    /* transform: rotate(180deg); */
   }
 
-  50% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(390deg);
-  }
-}
 
-@-webkit-keyframes gogogo {
-  0% {
-    left: 10vh;
-    width: 100px;
-    height: 130px;
-    background-color: #eb5c7e;
-    -webkit-transform: rotate(0);
-  }
-  30% {
-    left: 40vh;
-    background-color: #2a7df8;
-    -webkit-transform: rotate(0);
-  }
-  60% {
-    left: 10vh;
-    width: 100px;
-    height: 130px;
-    background-color: #eb5c7e;
-    -webkit-transform: rotate(-390deg);
-  }
   100% {
-    width: 80px;
-    height: 104px;
-    /* transform: rotate(-20deg); */
-    /* -webkit-transform: rotate(-30deg); */
-  }
-}
-
-@keyframes gogogo {
-  0% {
-    width: 100px;
-    height: 130px;
-    background-color: #eb5c7e;
-    transform: rotate(0);
-  }
-  30% {
-    left: 40vh;
-    background-color: #2a7df8;
-    -webkit-transform: rotate(0);
-  }
-  60% {
-    left: 10vh;
-    width: 100px;
-    height: 130px;
-    background-color: #eb5c7e;
-    -webkit-transform: rotate(-390deg);
-  }
-  100% {
-    width: 80px;
-   height: 104px;
-   /* webkit-transform: rotate(-20deg); */
-    /* -webkit-transform: rotate(-300deg); */
+    width: 30px;
+    height: 30px;
+    /* transform: rotate(180deg); */
   }
 }

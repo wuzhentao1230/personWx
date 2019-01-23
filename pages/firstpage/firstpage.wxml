@@ -1,16 +1,14 @@
 <view class='content'>
-  
-  <view class='body'>
-    <!-- <image class='left' src='{{person.leftimg}}'></image>
-    <image class='right' src='{{person.rightimg}}'></image> -->
+
+ 
+
+  <open-data class='leftPic' type="userAvatarUrl"></open-data>
+  <!-- <open-data type="userNickName" lang="zh_CN"></open-data> -->
+
+
+  <view class='rightView'>
+    <image class='rightPic' src='../../images/dianji.png' mode='widthFix'></image>
   </view>
-
-  <image class='leftPic' src='{{userInfo.avatarUrl}}' mode='widthFix'></image>
-
-  <image class='rightPic' src='../../images/dianji.png' mode='widthFix'></image>
-
-
-
 
 
   <!-- 中央点击事件 -->
@@ -23,4 +21,6 @@
 
 
 </view>
-<image class='bg' src='../../images/yun.jpg'></image>
+<view class='bgView'>
+ <image class='bg' src='../../images/yun.jpg' ></image>
+</view>
