@@ -18,10 +18,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    
+
     // wx.hideShareMenu()
   },
-  
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -29,9 +29,21 @@ Page({
     var that = this
     setTimeout(function() {
       that.setData({
-        userInfo: app.globalData.userInfo
+        userInfo: app.globalData.userInfo,
       })
-      console.log(that.data.userInfo)
+      console.log(app.globalData.userInfo)
+      // 发送 res.code 到后台换取 openId, sessionKey, unionId
+      wx.request({
+        url: 'https://wztsnn.xyz/wx/insertOrUpdate', // 仅为示例，并非真实的接口地址
+        method:"POST",
+        data: app.globalData.userInfo,
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success(res) {
+          console.log("update userInfo success:", res)
+        }
+      })
       if (app.globalData.userInfo) {
         that.setData({
           hasAuth: true

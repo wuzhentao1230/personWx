@@ -6,27 +6,7 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     var this_ = this
-    // 登录
-    wx.login({
-      success: res => {
-        // console.log(res.code);
-        var codeStr = res.code
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        wx.request({
-          url: 'https://wztsnn.xyz/wx/getId', // 仅为示例，并非真实的接口地址
-          data: {
-            code: codeStr
-          },
-          header: {
-            'content-type': 'application/json' // 默认值
-          },
-          success(res) {
-            console.log("获取用户openid:"+res.data.data.openid)
-            this_.globalData.openid = res.data.data.openid;
-          }
-        })
-      }
-    })
+    
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -37,12 +17,37 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
-              console.log('launch' + JSON.stringify(res.userInfo))
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
               }
+              
+              // 登录
+              wx.login({
+                success: res => {
+                  // console.log(res.code);
+                  var codeStr = res.code
+                  // 发送 res.code 到后台换取 openId, sessionKey, unionId
+                  wx.request({
+                    url: 'https://wztsnn.xyz/wx/getId', // 仅为示例，并非真实的接口地址
+                    data: {
+                      code: codeStr
+                    },
+                    header: {
+                      'content-type': 'application/json' // 默认值
+                    },
+                    success(res) {
+                      console.log("获取用户openid:" + res.data.data.data.openid)
+                      // this_.globalData.openid = res.data.data.openid;
+                      this_.globalData.userInfo['openid'] = res.data.data.data.openid
+                    }
+                  })
+                }
+              })
+
+
+              
             }
           })
         }
@@ -51,6 +56,5 @@ App({
   },
   globalData: {
     userInfo: null,
-    openid:""
   }
 })
